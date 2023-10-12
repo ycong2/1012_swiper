@@ -1,0 +1,98 @@
+body{
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-size: 100%;    /*반응형*/
+    line-height: 1.8;    /*단위를 쓰지 말아라  1.8은 180%와 같음*/
+    letter-spacing: -0.0085em;
+    color: #222;
+}
+
+#banner .swiper{
+    height: calc(100vh - 100px);
+}
+
+
+#banner .swiper-slide{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50.78vw;
+}
+
+#banner .swiper-slide .container{
+    height: 100%
+}
+
+.ceo{
+    background-image: url(https://www.wwdoctor.com/static/asset/images/main/banner_bg_01.jpg);
+}
+.gma{
+    background-image: url(https://www.wwdoctor.com/static/asset/images/main/banner_bg_02.jpg)
+}
+.mike{
+    background-image: url(https://www.wwdoctor.com/static/asset/images/main/banner_bg_03.jpg)
+}
+#banner .swiper-pagination{
+    margin:0 auto;
+    right:0;
+    text-align: left;
+    bottom: 11%;
+}
+
+#banner .swiper-pagination{
+    width: auto;
+    text-align: left;
+
+}
+
+#banner .swiper-pagination .swiper-pagination-bullet{
+    width: auto; height: auto; color:white;
+    background: transparent; opacity: 0.6;
+    font-size: 1.6em;
+    margin: 0 1.5rem 0 0;
+    position: unset;
+} 
+
+#banner .swiper-pagination .swiper-pagination-bullet-active{
+    opacity: 1;
+}
+
+#banner .swiper-pagination:before{
+    content:"";
+    position: absolute;
+    left:0; width: 100%;
+    height: 3px; background-color: rgba(255, 255, 255, 0.5);
+    bottom:-5px;
+}
+#banner .swiper-pagination .swiper-pagination-bullet:before{
+    content:"";
+    position: absolute;
+    left:0; width: 0%;
+    height: 3px; background-color:white;
+    bottom:-5px;  
+}
+
+#banner .swiper-pagination .swiper-pagination-bullet-active:before{
+    /* 스와이퍼시간에 맞추어야 함 */
+    width:100%;
+    transition:4s;
+}
+#pop{
+    display: none;
+    max-width: 600px;
+    height: 600px;
+    left: 0;right: 0;top: 0;bottom: 0;
+    
+}
+.show:after{
+    content:"";
+    position: fixed;
+    left: 0;right: 0;top: 0;bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999;
+
+}
+.show #pop{
+    display: block;
+    z-index: 1000;
+}

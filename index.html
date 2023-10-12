@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kr.co.kr</title>
+    <link rel="stylesheet" href="./css/bt5x.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link  rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+     <!-- css in js기법   -->
+</head>
+<body class="show">
+  <div id="banner">
+    <div class="swiper"> 
+      <div class="swiper-wrapper">     
+
+        <div class="swiper-slide ceo bg-dark">
+          <div class="container d-flex flex-column justify-content-center">
+            <h2 class="text-white mb-0">
+              근본치료에 집중하는<br>
+              평강원인치료법
+            </h2>
+            <p class="mt-5 mb-0">
+              <a href="#" class="text-white d-flex">
+                 <span class="detail me-4">자세히보기</span>
+                 <span class="go border rounded-circle d-block p-3">01</span>
+              </a>
+            </p>
+
+          </div>
+        </div>
+        <div class="swiper-slide gma bg-warning">
+          <div class="container d-flex flex-column justify-content-center">
+            <h2 class="text-white mb-0">
+              근본치료에 집중하는<br>
+              평강원인치료법
+            </h2>
+            <p class="mt-5 mb-0">
+              <a href="#" class="text-white d-flex">
+                 <span class="detail me-4">자세히보기</span>
+                 <span class="go border rounded-circle d-block p-3">02</span>
+              </a>
+            </p>
+
+          </div>
+        </div>
+        <div class="swiper-slide mike bg-light">
+        <div class="container d-flex flex-column justify-content-center">
+          <h2 class="text-white mb-0">
+            근본치료에 집중하는<br>
+            평강원인치료법
+          </h2>
+          <p class="mt-5 mb-0">
+            <a href="#" class="text-white d-flex">
+               <span class="detail me-4">자세히보기</span>
+               <span class="go border rounded-circle d-block p-3">03</span>
+            </a>
+          </p>
+       
+        </div>
+        </div>
+         
+    </div>
+    
+      <div class="swiper-pagination container"></div> 
+  </div>
+
+  <div id="pop" class="position-absolute m-auto bg-white"></div>
+  <script>
+    const menu = ['기침천식','편강의 마법','세번째버튼'];
+    const swiper = new Swiper('#banner .swiper', {
+                      loop: true,
+                      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+                      pagination: {
+      el: '#banner .swiper-pagination',
+			clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + menu[index] + '</span>';
+        },
+    },
+                
+    on: {
+      init: function(){
+        console.log('시작하자마자');
+      },
+      slideChange: function(){
+        console.log('슬라이드가 되고 나서');
+      }
+    },
+                  });
+
+   document.getElementById("pop").addEventListener('click',()=>{
+    document.body.classList.remove("show");
+   })               
+  </script>
+        
+   
+      
+</body>
+</html>
+
+ <!-- 보일러 플레이트     디지털레이블링 -->
